@@ -1,0 +1,1 @@
+# 通过 [Go 指南](https://tour.go-zh.org/), [无闻](https://github.com/Unknwon)大神的 [Go 编程基础](https://github.com/Unknwon/go-fundamental-programming)视频教程, 以及其翻译的 [Go 入门指南](https://github.com/Unknwon/the-way-to-go_ZH_CN)
