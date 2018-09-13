@@ -43,9 +43,15 @@ func main() {
 }
 
 func Disconnect(usb USB) {
-	if pc, ok := usb.(PersonalCompute); ok {
-		fmt.Println(pc.name)
-		return
+	// if pc, ok := usb.(PersonalCompute); ok {
+	// 	fmt.Println(pc.name)
+	// 	return
+	// }
+	// fmt.Println("Unknown device")
+	switch usb.(type) {
+	case PersonalCompute:
+		fmt.Println("PC")
+	default:
+		fmt.Println("Other")
 	}
-	fmt.Println("Unknown device")
 }
