@@ -1,15 +1,75 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>登录页面</title>
+        <meta name="author" content="llllllllly" />
+        <meta name="keywords" content="jQuery, Validation, demo" />
+        <meta name="description" content="jQuery插件Validation的学习dmeo" />
+        <title>初次尝试Validation</title>
+        <style>
+            .contains {
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                height: 60vh;
+            }
+        </style>
     </head>
     <body>
-        <form action="/login" method="POST">
-            <label for="username">用户名:</label>
-            <input type="text" id="username" name="username" placeholder="请输入用户名" />
-            <label for="password">密码:</label>
-            <input type="password" id="password" name="password" placeholder="请输入密码" />
-            <input type="submit" value="登录" />
-        </form>
+        <div class="contains">
+            <form class="loginform" id="loginform" action="/login" method="POST" name="login" style="width: 350px;">
+                    <fieldset>
+                        <legend>用户注册</legend>
+                        <p id="info"></p>
+                        <p>
+                            <label for="name">姓名:</label>
+                            <input type="text" id="name" name="name" placeholder="请输入姓名" />
+                        </p>
+                        <p>
+                            <label for="username">用户名:</label>
+                            <input type="text" id="username" name="username" placeholder="请输入用户名(电子邮件)" />
+                        </p>
+                        <p>
+                            <label for="password">密码:</label>
+                            <input type="password" id="password" name="password" class="password" placeholder="请输入密码" />
+                        </p>
+                        <p>
+                            <label for="confirm_password">密码:</label>
+                            <input type="password" class="password" name="confirm_password" placeholder="请确认密码" />
+                        </p>
+                        <p>
+                            <label for="age">年龄:</label>
+                            <input type="text" class="age" name="age" placeholder="请输入年龄" />
+                        </p>
+                        <p>
+                            <label for="phone">手机号码:</label>
+                            <input type="text" class="phone" name="phone" placeholder="请输入手机号码" />
+                        </p>
+                        <p>
+                            <label for="role">职业:</label>
+                            <select name="role" id="role">
+                                <option value="student">学生</option>
+                                <option value="Other">其它</option>
+                            </select>
+                        </p>
+                        <p>
+                            <input type="radio" name="gender" id="male" value="1" />
+                            <label for="male">男性</label>
+                            <input type="radio" name="gender" id="female" value="2" />
+                            <label for="female">女性</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="interest" id="football" value="football">
+                            <label for="football">足球</label>
+                            <input type="checkbox" name="interest" id="basketball" value="basketball">
+                            <label for="basketball">篮球</label>
+                            <input type="checkbox" name="interest" id="tennis" value="tennis">
+                            <label for="tennis">网球</label>
+                        </p>
+                        <input type="hidden" name="token" value="{{.}}">
+                        <input type="submit" class="submit" value="登录" />
+                    </fieldset>
+                </form>
+        </div>
     </body>
 </html>
